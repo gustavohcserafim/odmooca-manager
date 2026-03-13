@@ -44,9 +44,7 @@ describe("Member Validation", () => {
     });
 
     it("rejects invalid email format", () => {
-      expect(validateMemberEmail("invalid")).toBe(
-        "E-mail inválido"
-      );
+      expect(validateMemberEmail("invalid")).toBe("E-mail inválido");
     });
 
     it("rejects email without @", () => {

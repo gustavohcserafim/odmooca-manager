@@ -59,9 +59,7 @@ export function MembersClient({ members }: MembersClientProps) {
 
       {members.length === 0 ? (
         <div className="flex flex-col items-center gap-2 rounded-xl border border-dashed bg-card p-12 text-center">
-          <p className="text-lg font-medium">
-            Nenhum membro cadastrado
-          </p>
+          <p className="text-lg font-medium">Nenhum membro cadastrado</p>
           <p className="text-sm text-muted-foreground">
             Cadastre o primeiro membro para começar
           </p>

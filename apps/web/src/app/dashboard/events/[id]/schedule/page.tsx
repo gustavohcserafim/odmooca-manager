@@ -40,9 +40,7 @@ export default async function SchedulePage({
         >
           ← Voltar para Eventos
         </Link>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight">
-          {event.name}
-        </h2>
+        <h2 className="mt-2 text-2xl font-bold tracking-tight">{event.name}</h2>
         <div className="flex flex-wrap gap-2 text-sm text-muted-foreground">
           <span>{eventDate}</span>
           <span className="rounded bg-muted px-1.5 py-0.5 text-xs">

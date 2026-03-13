@@ -2,11 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { validateMemberInput } from "@/core/members";
-import {
-  createMember,
-  updateMember,
-  deleteMember,
-} from "@/services/members";
+import { createMember, updateMember, deleteMember } from "@/services/members";
 import type { ActionState } from "@/lib/actions";
 
 export async function createMemberAction(
@@ -59,9 +55,7 @@ export async function updateMemberAction(
     return { success: true, message: "Membro atualizado com sucesso!" };
   } catch (error) {
     const msg =
-      error instanceof Error
-        ? error.message
-        : "Erro ao atualizar membro";
+      error instanceof Error ? error.message : "Erro ao atualizar membro";
     if (msg.includes("duplicate key") || msg.includes("unique")) {
       return {
         success: false,
@@ -72,9 +66,7 @@ export async function updateMemberAction(
   }
 }
 
-export async function deleteMemberAction(
-  id: string
-): Promise<ActionState> {
+export async function deleteMemberAction(id: string): Promise<ActionState> {
   try {
     await deleteMember(id);
     revalidatePath("/dashboard/members");
@@ -83,9 +75,7 @@ export async function deleteMemberAction(
     return {
       success: false,
       message:
-        error instanceof Error
-          ? error.message
-          : "Erro ao excluir membro",
+        error instanceof Error ? error.message : "Erro ao excluir membro",
     };
   }
 }

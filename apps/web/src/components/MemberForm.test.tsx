@@ -4,9 +4,10 @@ import { MemberForm } from "./MemberForm";
 import type { ActionState } from "@/lib/actions";
 
 describe("MemberForm", () => {
-  const mockAction = vi.fn<
-    (prevState: ActionState, formData: FormData) => Promise<ActionState>
-  >();
+  const mockAction =
+    vi.fn<
+      (prevState: ActionState, formData: FormData) => Promise<ActionState>
+    >();
 
   beforeEach(() => {
     vi.clearAllMocks();
@@ -62,22 +63,16 @@ describe("MemberForm", () => {
     };
     render(<MemberForm action={mockAction} member={member} />);
     expect(screen.getByDisplayValue("João Silva")).toBeInTheDocument();
-    expect(
-      screen.getByDisplayValue("joao@email.com")
-    ).toBeInTheDocument();
+    expect(screen.getByDisplayValue("joao@email.com")).toBeInTheDocument();
     expect(screen.getByDisplayValue("11999887766")).toBeInTheDocument();
   });
 
   it("renders placeholder text for inputs", () => {
     render(<MemberForm action={mockAction} />);
-    expect(
-      screen.getByPlaceholderText("Nome completo")
-    ).toBeInTheDocument();
+    expect(screen.getByPlaceholderText("Nome completo")).toBeInTheDocument();
     expect(
       screen.getByPlaceholderText("email@exemplo.com")
     ).toBeInTheDocument();
-    expect(
-      screen.getByPlaceholderText("(11) 99999-8888")
-    ).toBeInTheDocument();
+    expect(screen.getByPlaceholderText("(11) 99999-8888")).toBeInTheDocument();
   });
 });

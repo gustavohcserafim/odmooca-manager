@@ -15,13 +15,15 @@ export async function GET(request: Request) {
       {
         cookies: {
           getAll() {
-            return request.headers
-              .get("cookie")
-              ?.split("; ")
-              .map((c) => {
-                const [name, ...rest] = c.split("=");
-                return { name, value: rest.join("=") };
-              }) ?? [];
+            return (
+              request.headers
+                .get("cookie")
+                ?.split("; ")
+                .map((c) => {
+                  const [name, ...rest] = c.split("=");
+                  return { name, value: rest.join("=") };
+                }) ?? []
+            );
           },
           setAll(cookiesToSet) {
             cookiesToSet.forEach(({ name, value, options }) =>

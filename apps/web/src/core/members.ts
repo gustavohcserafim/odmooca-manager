@@ -25,13 +25,10 @@ export function validateMemberEmail(email: string): string | null {
   return null;
 }
 
-export function validateMemberPhone(
-  phone: string | undefined
-): string | null {
+export function validateMemberPhone(phone: string | undefined): string | null {
   if (!phone || !phone.trim()) return null;
   const digits = phone.replace(/\D/g, "");
-  if (digits.length < 10)
-    return "Telefone deve ter pelo menos 10 dígitos";
+  if (digits.length < 10) return "Telefone deve ter pelo menos 10 dígitos";
   return null;
 }
 

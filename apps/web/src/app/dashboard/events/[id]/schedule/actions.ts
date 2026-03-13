@@ -39,9 +39,7 @@ export async function addAssignmentAction(
     return {
       success: false,
       message:
-        error instanceof Error
-          ? error.message
-          : "Erro ao escalar voluntário",
+        error instanceof Error ? error.message : "Erro ao escalar voluntário",
     };
   }
 }
@@ -58,9 +56,7 @@ export async function removeAssignmentAction(
     return {
       success: false,
       message:
-        error instanceof Error
-          ? error.message
-          : "Erro ao remover voluntário",
+        error instanceof Error ? error.message : "Erro ao remover voluntário",
     };
   }
 }
@@ -73,14 +69,15 @@ export async function updateScheduleStatusAction(
   try {
     await updateScheduleStatus(scheduleId, status);
     revalidatePath(`/dashboard/events/${eventId}/schedule`);
-    return { success: true, message: `Escala ${status === "published" ? "publicada" : "atualizada"}!` };
+    return {
+      success: true,
+      message: `Escala ${status === "published" ? "publicada" : "atualizada"}!`,
+    };
   } catch (error) {
     return {
       success: false,
       message:
-        error instanceof Error
-          ? error.message
-          : "Erro ao atualizar status",
+        error instanceof Error ? error.message : "Erro ao atualizar status",
     };
   }
 }

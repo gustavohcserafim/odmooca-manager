@@ -3,11 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { validateEventInput } from "@/core/events";
 import type { EventType } from "@odmooca/shared";
-import {
-  createEvent,
-  updateEvent,
-  deleteEvent,
-} from "@/services/events";
+import { createEvent, updateEvent, deleteEvent } from "@/services/events";
 import type { ActionState } from "@/lib/actions";
 
 export async function createEventAction(
@@ -34,8 +30,7 @@ export async function createEventAction(
   } catch (error) {
     return {
       success: false,
-      message:
-        error instanceof Error ? error.message : "Erro ao criar evento",
+      message: error instanceof Error ? error.message : "Erro ao criar evento",
     };
   }
 }
@@ -66,16 +61,12 @@ export async function updateEventAction(
     return {
       success: false,
       message:
-        error instanceof Error
-          ? error.message
-          : "Erro ao atualizar evento",
+        error instanceof Error ? error.message : "Erro ao atualizar evento",
     };
   }
 }
 
-export async function deleteEventAction(
-  id: string
-): Promise<ActionState> {
+export async function deleteEventAction(id: string): Promise<ActionState> {
   try {
     await deleteEvent(id);
     revalidatePath("/dashboard/events");
@@ -84,9 +75,7 @@ export async function deleteEventAction(
     return {
       success: false,
       message:
-        error instanceof Error
-          ? error.message
-          : "Erro ao excluir evento",
+        error instanceof Error ? error.message : "Erro ao excluir evento",
     };
   }
 }

@@ -24,10 +24,8 @@ const VALID_EVENT_TYPES: EventType[] = [
 export function validateEventName(name: string): string | null {
   const trimmed = name.trim();
   if (!trimmed) return "Nome do evento é obrigatório";
-  if (trimmed.length < 3)
-    return "Nome deve ter pelo menos 3 caracteres";
-  if (trimmed.length > 150)
-    return "Nome deve ter no máximo 150 caracteres";
+  if (trimmed.length < 3) return "Nome deve ter pelo menos 3 caracteres";
+  if (trimmed.length > 150) return "Nome deve ter no máximo 150 caracteres";
   return null;
 }
 

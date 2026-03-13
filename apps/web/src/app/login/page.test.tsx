@@ -38,9 +38,7 @@ describe("LoginPage", () => {
 
   it("renders the login button", () => {
     render(<LoginPage />);
-    expect(
-      screen.getByRole("button", { name: /entrar/i })
-    ).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /entrar/i })).toBeInTheDocument();
   });
 
   it("shows validation error for empty email", async () => {
@@ -101,8 +99,6 @@ describe("LoginPage", () => {
     const button = screen.getByRole("button", { name: /entrar/i });
     await user.click(button);
 
-    expect(
-      await screen.findByText(/rate limit exceeded/i)
-    ).toBeInTheDocument();
+    expect(await screen.findByText(/rate limit exceeded/i)).toBeInTheDocument();
   });
 });

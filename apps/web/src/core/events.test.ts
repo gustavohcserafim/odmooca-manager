@@ -14,9 +14,7 @@ describe("Event Validation", () => {
     });
 
     it("rejects whitespace-only name", () => {
-      expect(validateEventName("   ")).toBe(
-        "Nome do evento é obrigatório"
-      );
+      expect(validateEventName("   ")).toBe("Nome do evento é obrigatório");
     });
 
     it("rejects name shorter than 3 characters", () => {

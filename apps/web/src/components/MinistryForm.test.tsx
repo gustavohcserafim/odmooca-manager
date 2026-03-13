@@ -5,9 +5,10 @@ import { MinistryForm } from "./MinistryForm";
 import type { ActionState } from "@/lib/actions";
 
 describe("MinistryForm", () => {
-  const mockAction = vi.fn<
-    (prevState: ActionState, formData: FormData) => Promise<ActionState>
-  >();
+  const mockAction =
+    vi.fn<
+      (prevState: ActionState, formData: FormData) => Promise<ActionState>
+    >();
 
   beforeEach(() => {
     vi.clearAllMocks();
@@ -68,9 +69,10 @@ describe("MinistryForm", () => {
   });
 
   it("displays error messages from action state", () => {
-    const actionWithError = vi.fn<
-      (prevState: ActionState, formData: FormData) => Promise<ActionState>
-    >();
+    const actionWithError =
+      vi.fn<
+        (prevState: ActionState, formData: FormData) => Promise<ActionState>
+      >();
     actionWithError.mockResolvedValue({
       success: false,
       errors: { name: "Nome é obrigatório" },
@@ -79,8 +81,6 @@ describe("MinistryForm", () => {
     // Since useActionState doesn't immediately reflect, we test the initial render
     render(<MinistryForm action={actionWithError} />);
     // Initial state has no errors
-    expect(
-      screen.queryByText("Nome é obrigatório")
-    ).not.toBeInTheDocument();
+    expect(screen.queryByText("Nome é obrigatório")).not.toBeInTheDocument();
   });
 });

@@ -9,9 +9,7 @@ export default async function MembersPage() {
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-2xl font-bold tracking-tight">Membros</h2>
-          <p className="text-muted-foreground">
-            Gerencie os membros da igreja
-          </p>
+          <p className="text-muted-foreground">Gerencie os membros da igreja</p>
         </div>
       </div>
 

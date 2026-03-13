@@ -142,7 +142,10 @@ export async function addAssignment(
   });
 
   if (error) {
-    if (error.message.includes("duplicate") || error.message.includes("unique")) {
+    if (
+      error.message.includes("duplicate") ||
+      error.message.includes("unique")
+    ) {
       throw new Error("Este voluntário já está escalado neste evento");
     }
     throw new Error(error.message);

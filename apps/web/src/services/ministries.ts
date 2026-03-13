@@ -12,9 +12,7 @@ export async function getMinistries(): Promise<Ministry[]> {
   return (data ?? []).map(mapMinistry);
 }
 
-export async function getMinistryById(
-  id: string
-): Promise<Ministry | null> {
+export async function getMinistryById(id: string): Promise<Ministry | null> {
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("ministries")
@@ -59,10 +57,7 @@ export async function updateMinistry(
 
 export async function deleteMinistry(id: string): Promise<void> {
   const supabase = await createClient();
-  const { error } = await supabase
-    .from("ministries")
-    .delete()
-    .eq("id", id);
+  const { error } = await supabase.from("ministries").delete().eq("id", id);
 
   if (error) throw new Error(error.message);
 }

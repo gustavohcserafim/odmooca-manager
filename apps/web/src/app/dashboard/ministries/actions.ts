@@ -31,9 +31,7 @@ export async function createMinistryAction(
     return {
       success: false,
       message:
-        error instanceof Error
-          ? error.message
-          : "Erro ao criar ministério",
+        error instanceof Error ? error.message : "Erro ao criar ministério",
     };
   }
 }
@@ -62,16 +60,12 @@ export async function updateMinistryAction(
     return {
       success: false,
       message:
-        error instanceof Error
-          ? error.message
-          : "Erro ao atualizar ministério",
+        error instanceof Error ? error.message : "Erro ao atualizar ministério",
     };
   }
 }
 
-export async function deleteMinistryAction(
-  id: string
-): Promise<ActionState> {
+export async function deleteMinistryAction(id: string): Promise<ActionState> {
   try {
     await deleteMinistry(id);
     revalidatePath("/dashboard/ministries");
@@ -83,9 +77,7 @@ export async function deleteMinistryAction(
     return {
       success: false,
       message:
-        error instanceof Error
-          ? error.message
-          : "Erro ao excluir ministério",
+        error instanceof Error ? error.message : "Erro ao excluir ministério",
     };
   }
 }

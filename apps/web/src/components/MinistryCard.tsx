@@ -32,11 +32,7 @@ export function MinistryCard({ ministry, onEdit }: MinistryCardProps) {
         )}
       </div>
       <div className="flex gap-2">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => onEdit(ministry)}
-        >
+        <Button variant="outline" size="sm" onClick={() => onEdit(ministry)}>
           Editar
         </Button>
         <Button

@@ -8,9 +8,7 @@ export default async function MinistriesPage() {
     <div className="flex flex-col gap-6">
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold tracking-tight">
-            Ministérios
-          </h2>
+          <h2 className="text-2xl font-bold tracking-tight">Ministérios</h2>
           <p className="text-muted-foreground">
             Gerencie os ministérios da igreja
           </p>

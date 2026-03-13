@@ -9,10 +9,7 @@ import type { ChurchEvent, EventType } from "@odmooca/shared";
 import { EVENT_TYPE_LABELS } from "@/core/events";
 
 interface EventFormProps {
-  action: (
-    prevState: ActionState,
-    formData: FormData
-  ) => Promise<ActionState>;
+  action: (prevState: ActionState, formData: FormData) => Promise<ActionState>;
   event?: ChurchEvent;
   onSuccess?: () => void;
 }
@@ -20,10 +17,7 @@ interface EventFormProps {
 const initialState: ActionState = { success: false };
 
 export function EventForm({ action, event, onSuccess }: EventFormProps) {
-  const [state, formAction, isPending] = useActionState(
-    action,
-    initialState
-  );
+  const [state, formAction, isPending] = useActionState(action, initialState);
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {

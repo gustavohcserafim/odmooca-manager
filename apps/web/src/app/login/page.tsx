@@ -53,9 +53,7 @@ export default function LoginPage() {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <Card className="w-full max-w-sm">
         <CardHeader className="text-center">
-          <CardTitle className="text-2xl font-bold">
-            OD Mooca Manager
-          </CardTitle>
+          <CardTitle className="text-2xl font-bold">OD Mooca Manager</CardTitle>
           <CardDescription>
             Acesse com seu e-mail para gerenciar escalas
           </CardDescription>

@@ -12,9 +12,7 @@ export async function getEvents(): Promise<ChurchEvent[]> {
   return (data ?? []).map(mapEvent);
 }
 
-export async function getEventById(
-  id: string
-): Promise<ChurchEvent | null> {
+export async function getEventById(id: string): Promise<ChurchEvent | null> {
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("events")

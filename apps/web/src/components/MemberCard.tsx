@@ -31,11 +31,7 @@ export function MemberCard({ member, onEdit }: MemberCardProps) {
         )}
       </div>
       <div className="flex gap-2">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => onEdit(member)}
-        >
+        <Button variant="outline" size="sm" onClick={() => onEdit(member)}>
           Editar
         </Button>
         <Button

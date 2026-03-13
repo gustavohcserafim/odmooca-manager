@@ -32,7 +32,10 @@ export interface VolunteerRole {
 }
 
 // ── Event ───────────────────────────────────────────────────────────
-export type EventType = "sunday_service" | "wednesday_service" | "special_event";
+export type EventType =
+  | "sunday_service"
+  | "wednesday_service"
+  | "special_event";
 
 export interface ChurchEvent {
   id: string;

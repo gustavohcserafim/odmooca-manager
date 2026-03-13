@@ -10,10 +10,7 @@ import {
 } from "@/components/ui/dialog";
 import { MinistryForm } from "@/components/MinistryForm";
 import { MinistryCard } from "@/components/MinistryCard";
-import {
-  createMinistryAction,
-  updateMinistryAction,
-} from "./actions";
+import { createMinistryAction, updateMinistryAction } from "./actions";
 import type { Ministry } from "@odmooca/shared";
 
 interface MinistriesClientProps {
@@ -66,9 +63,7 @@ export function MinistriesClient({ ministries }: MinistriesClientProps) {
       {/* Ministry List */}
       {ministries.length === 0 ? (
         <div className="flex flex-col items-center gap-2 rounded-xl border border-dashed bg-card p-12 text-center">
-          <p className="text-lg font-medium">
-            Nenhum ministério cadastrado
-          </p>
+          <p className="text-lg font-medium">Nenhum ministério cadastrado</p>
           <p className="text-sm text-muted-foreground">
             Crie o primeiro ministério para começar
           </p>

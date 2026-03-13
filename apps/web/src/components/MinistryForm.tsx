@@ -9,10 +9,7 @@ import type { ActionState } from "@/lib/actions";
 import type { Ministry } from "@odmooca/shared";
 
 interface MinistryFormProps {
-  action: (
-    prevState: ActionState,
-    formData: FormData
-  ) => Promise<ActionState>;
+  action: (prevState: ActionState, formData: FormData) => Promise<ActionState>;
   ministry?: Ministry;
   onSuccess?: () => void;
 }
@@ -24,10 +21,7 @@ export function MinistryForm({
   ministry,
   onSuccess,
 }: MinistryFormProps) {
-  const [state, formAction, isPending] = useActionState(
-    action,
-    initialState
-  );
+  const [state, formAction, isPending] = useActionState(action, initialState);
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
@@ -65,9 +59,7 @@ export function MinistryForm({
           rows={3}
         />
         {state.errors?.description && (
-          <p className="text-sm text-destructive">
-            {state.errors.description}
-          </p>
+          <p className="text-sm text-destructive">{state.errors.description}</p>
         )}
       </div>
 

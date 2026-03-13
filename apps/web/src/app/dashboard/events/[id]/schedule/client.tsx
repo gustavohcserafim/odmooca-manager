@@ -47,11 +47,7 @@ export function ScheduleClient({
   const [addOpen, setAddOpen] = useState(false);
 
   const initialState: ActionState = { success: false };
-  const boundAction = addAssignmentAction.bind(
-    null,
-    schedule.id,
-    eventId
-  );
+  const boundAction = addAssignmentAction.bind(null, schedule.id, eventId);
   const [state, formAction, isPending] = useActionState(
     boundAction,
     initialState
@@ -98,11 +94,7 @@ export function ScheduleClient({
               variant="secondary"
               size="sm"
               onClick={() =>
-                updateScheduleStatusAction(
-                  schedule.id,
-                  eventId,
-                  "published"
-                )
+                updateScheduleStatusAction(schedule.id, eventId, "published")
               }
             >
               Publicar Escala
@@ -178,9 +170,7 @@ export function ScheduleClient({
                 required
               />
               {state.errors?.role && (
-                <p className="text-sm text-destructive">
-                  {state.errors.role}
-                </p>
+                <p className="text-sm text-destructive">{state.errors.role}</p>
               )}
             </div>
 
@@ -220,17 +210,13 @@ export function ScheduleClient({
                   >
                     <div>
                       <p className="font-medium">{a.member_name}</p>
-                      <p className="text-xs text-muted-foreground">
-                        {a.role}
-                      </p>
+                      <p className="text-xs text-muted-foreground">{a.role}</p>
                     </div>
                     <Button
                       variant="ghost"
                       size="sm"
                       className="text-destructive hover:text-destructive"
-                      onClick={() =>
-                        removeAssignmentAction(a.id, eventId)
-                      }
+                      onClick={() => removeAssignmentAction(a.id, eventId)}
                     >
                       Remover
                     </Button>

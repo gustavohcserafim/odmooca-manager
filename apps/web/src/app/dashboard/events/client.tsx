@@ -113,9 +113,7 @@ export function EventsClient({ events }: EventsClientProps) {
                   variant="destructive"
                   size="sm"
                   onClick={async () => {
-                    if (
-                      confirm(`Excluir o evento "${event.name}"?`)
-                    ) {
+                    if (confirm(`Excluir o evento "${event.name}"?`)) {
                       await deleteEventAction(event.id);
                     }
                   }}

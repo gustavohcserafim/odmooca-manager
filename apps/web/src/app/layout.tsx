@@ -14,8 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "OD Mooca Manager",
-  description:
-    "Gerenciador de escalas de voluntários - Onda Dura Mooca",
+  description: "Gerenciador de escalas de voluntários - Onda Dura Mooca",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,

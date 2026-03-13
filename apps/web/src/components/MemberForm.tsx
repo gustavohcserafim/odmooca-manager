@@ -8,10 +8,7 @@ import type { ActionState } from "@/lib/actions";
 import type { Member } from "@odmooca/shared";
 
 interface MemberFormProps {
-  action: (
-    prevState: ActionState,
-    formData: FormData
-  ) => Promise<ActionState>;
+  action: (prevState: ActionState, formData: FormData) => Promise<ActionState>;
   member?: Member;
   onSuccess?: () => void;
 }
@@ -19,10 +16,7 @@ interface MemberFormProps {
 const initialState: ActionState = { success: false };
 
 export function MemberForm({ action, member, onSuccess }: MemberFormProps) {
-  const [state, formAction, isPending] = useActionState(
-    action,
-    initialState
-  );
+  const [state, formAction, isPending] = useActionState(action, initialState);
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {

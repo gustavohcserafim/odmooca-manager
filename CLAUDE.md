@@ -2,7 +2,6 @@ CLAUDE.md - OD Mooca Manager (XP Edition)
 Visão Geral e Filosofia (Extreme Programming)
 Este projeto segue rigorosamente os princípios de Extreme Programming (XP) mediado por IA.
 
-
 Pair Programming: O Usuário é o Navigator (define o "quê" e o "porquê") e o Agente é o Driver (executa o "como").
 
 Small Releases: Cada interação deve resultar em um commit funcional e pronto para produção.
@@ -18,16 +17,13 @@ Linguagem: TypeScript (Strict Mode).
 
 UI: Tailwind CSS + Shadcn/ui (Mobile-first).
 
-
 Testes (Crítico): Vitest (Unitários) e Playwright (E2E).
-
 
 CI/CD: GitHub Actions (Lint -> Security Scan -> Testes).
 
 Estratégia de Testes (TDD)
 
 Ratio Alvo: Manter ~1.5x mais linhas de teste do que de código funcional.
-
 
 Ciclo Virtuoso: O Agente deve propor o teste antes da implementação da lógica.
 
@@ -56,25 +52,23 @@ Hurdle 01: Latência de Auth no Supabase -> Solution: Middleware protection.
 
 Hurdle 02: Notificações PWA no iOS -> Solution: Manifest.json + Service Worker específico.
 
-
 (Adicionar novos obstáculos conforme surgirem, conforme a lição de que a documentação retorna investimento )
 
 Pipeline Semanal & Ritmo
 
 Segunda a Quinta: Ciclos de TDD e Small Releases.
 
-
 Quinta (10h): Hardenning e Testes E2E completos.
 
 Sexta (09h): Deploy em produção.
 
 Checklist Pós-Implementação (Obrigatório)
-[ ] O código funcional tem testes unitários correspondentes? 
+[ ] O código funcional tem testes unitários correspondentes?
 
-[ ] O ratio de teste/código está próximo de 1.5x? 
+[ ] O ratio de teste/código está próximo de 1.5x?
 
-[ ] Rodou o Linter e verificou vulnerabilidades de segurança? 
+[ ] Rodou o Linter e verificou vulnerabilidades de segurança?
 
 [ ] A interface foi validada em viewport mobile real?
 
-[ ] O CLAUDE.md foi atualizado com novos aprendizados ou padrões? 
+[ ] O CLAUDE.md foi atualizado com novos aprendizados ou padrões?
