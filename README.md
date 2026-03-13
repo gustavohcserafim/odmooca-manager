@@ -11,25 +11,30 @@ Sistema de gerenciamento de escalas de voluntários da igreja **Onda Dura Mooca*
 ## ✨ Funcionalidades
 
 ### Autenticação
+
 - Login via **Magic Link** (e-mail) — sem senha
 - Rotas protegidas com middleware
 - Sign-out integrado
 
 ### Ministérios
+
 - Cadastrar, editar e excluir ministérios (ex: Louvor, Mídia, Recepção)
 - Validação de nome (3–150 caracteres) e descrição (até 500)
 
 ### Membros
+
 - Cadastrar, editar e excluir membros
 - Campos: nome, e-mail (único), telefone (10+ dígitos)
 - Detecção de e-mail duplicado com mensagem amigável
 
 ### Eventos
+
 - Cadastrar cultos e eventos especiais
 - Tipos: Culto de Domingo, Culto de Quarta, Evento Especial
 - Data e hora com formatação pt-BR
 
 ### Escalas
+
 - Escala automática criada por evento (rascunho)
 - Escalar voluntários: selecionar membro + ministério + função
 - Visualização agrupada por ministério
@@ -40,15 +45,15 @@ Sistema de gerenciamento de escalas de voluntários da igreja **Onda Dura Mooca*
 
 ## 🛠️ Tech Stack
 
-| Camada | Tecnologia |
-|---|---|
+| Camada       | Tecnologia                                    |
+| ------------ | --------------------------------------------- |
 | **Frontend** | Next.js 16 (App Router), React 19, TypeScript |
-| **Estilo** | Tailwind CSS 4, Shadcn/ui |
-| **Backend** | Supabase (PostgreSQL, Auth, RLS) |
-| **Testes** | Vitest, Testing Library (67 testes) |
-| **CI/CD** | GitHub Actions + Vercel |
-| **Monorepo** | npm workspaces |
-| **PWA** | Manifest + mobile-first |
+| **Estilo**   | Tailwind CSS 4, Shadcn/ui                     |
+| **Backend**  | Supabase (PostgreSQL, Auth, RLS)              |
+| **Testes**   | Vitest, Testing Library (67 testes)           |
+| **CI/CD**    | GitHub Actions + Vercel                       |
+| **Monorepo** | npm workspaces                                |
+| **PWA**      | Manifest + mobile-first                       |
 
 ---
 

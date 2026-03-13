@@ -52,6 +52,8 @@ Hurdle 01: Latência de Auth no Supabase -> Solution: Middleware protection.
 
 Hurdle 02: Notificações PWA no iOS -> Solution: Manifest.json + Service Worker específico.
 
+Hurdle 03: CI quebra por Prettier format:check -> Solution: SEMPRE rodar `npm run format` antes de commitar. O CI roda `prettier --check` e falha se qualquer arquivo não estiver formatado. Comando seguro: `npm run format && git add -A && git commit`.
+
 (Adicionar novos obstáculos conforme surgirem, conforme a lição de que a documentação retorna investimento )
 
 Pipeline Semanal & Ritmo
