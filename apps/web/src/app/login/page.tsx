@@ -52,9 +52,11 @@ export default function LoginPage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <Card className="w-full max-w-sm">
-        <CardHeader className="text-center">
-          <CardTitle className="text-2xl font-bold">OD Mooca Manager</CardTitle>
-          <CardDescription>
+        <CardHeader className="text-center space-y-4 pt-8">
+          <CardTitle className="text-3xl font-heading font-black uppercase tracking-tighter text-primary">
+            OD Mooca Manager
+          </CardTitle>
+          <CardDescription className="text-base">
             Acesse com seu e-mail para gerenciar escalas
           </CardDescription>
         </CardHeader>
@@ -73,7 +75,11 @@ export default function LoginPage() {
               />
             </div>
 
-            <Button type="submit" className="w-full" disabled={loading}>
+            <Button
+              type="submit"
+              className="w-full font-bold text-base h-12"
+              disabled={loading}
+            >
               {loading ? "Enviando..." : "Entrar com Magic Link"}
             </Button>
 
